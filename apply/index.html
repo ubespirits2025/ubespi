@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>練習試合申込み | 宇部スピリッツ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="brand">
+            <img src="../images/team_logo.jpg" alt="Ube Spirits Logo" class="brand-logo">
+            <div class="brand-text">
+                <span class="brand-main">Ube Spirits</span>
+                <span class="brand-sub">宇部スピリッツ 草野球チーム</span>
+            </div>
+        </a>
+
+        <nav class="global-nav">
+            <ul>
+                <li><a href="../index.html">TOP</a></li>
+                <li><a href="../members/index.html">メンバー</a></li>
+                <li><a href="../schedule/index.html">試合予定</a></li>
+                <li><a href="../results/index.html">試合結果</a></li>
+                <li><a href="../gallery/index.html">ギャラリー</a></li>
+                <li><a href="../recruit/index.html">メンバー募集</a></li>
+                <li><a href="index.html" class="active">練習試合申込み</a></li>
+                <li><a href="../support/index.html">応援</a></li>
+                <li><a href="../contact/index.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- 上部ヒーロー -->
+    <section class="page-hero apply-hero">
+        <div class="page-hero-inner">
+            <p class="page-hero-tagline">PRACTICE GAME ENTRY</p>
+            <h1 class="page-hero-title">練習試合申込み</h1>
+            <p class="page-hero-text">
+                宇部スピリッツとの練習試合を希望されるチームの方は、<br>
+                下記フォームよりお気軽にお問い合わせください。
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner">
+
+            <h2 class="section-title">ー フォーム入力 ー</h2>
+
+            <p class="apply-intro">
+                可能な範囲で構いませんので、分かる項目だけご入力ください。<br>
+                日程や場所などの詳細は、いただいた連絡先宛に折り返しご相談させていただきます。
+            </p>
+
+            <!-- 実際のメール送信処理は未実装想定。actionはダミーにしておく -->
+            <form class="apply-form" action="#" method="post">
+                <div class="form-row">
+                    <label for="team-name">チーム名 <span class="required">必須</span></label>
+                    <input type="text" id="team-name" name="team_name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="rep-name">代表者名 / ご担当者名 <span class="required">必須</span></label>
+                    <input type="text" id="rep-name" name="rep_name" required>
+                </div>
+
+                <div class="form-row form-row-half">
+                    <div>
+                        <label for="email">メールアドレス <span class="required">必須</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="tel">電話番号</label>
+                        <input type="tel" id="tel" name="tel" placeholder="例）090-1234-5678">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="candidate-date">希望日程・曜日</label>
+                    <textarea id="candidate-date" name="candidate_date" rows="2" placeholder="例）日曜の午前中希望 / 〇月△日〜〇月□日のいずれか など"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label>グラウンド</label>
+                    <div class="form-radio-group">
+                        <label><input type="radio" name="ground" value="our" checked> 宇部スピリッツ側で確保</label>
+                        <label><input type="radio" name="ground" value="yours"> 貴チーム側で確保可能</label>
+                        <label><input type="radio" name="ground" value="both"> どちらでも可（要相談）</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="level">チームレベルの目安</label>
+                    <select id="level" name="level">
+                        <option value="">選択してください</option>
+                        <option value="beginner">初心者中心（ゆったり楽しみたい）</option>
+                        <option value="middle">中級（そこそこ本気でやりたい）</option>
+                        <option value="advanced">上級（大会も積極的に参加）</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">その他ご要望・メッセージ</label>
+                    <textarea id="message" name="message" rows="4" placeholder="例）貴チームの投手力・打力の目安、イニング数の希望、攻撃・守備交互、参加人数の見込みなど"></textarea>
+                </div>
+
+                <div class="form-row form-submit-row">
+                    <p class="apply-note">
+                        ※ 送信ボタンを押しても、現時点ではサーバ側の処理は行っていません。<br>
+                        実際に使用する場合には、メール送信やデータ保存の処理を追加する想定です。
+                    </p>
+                    <button type="submit" class="apply-submit">送信する（ダミー）</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Ube Spirits Baseball Team. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

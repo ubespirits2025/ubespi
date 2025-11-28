@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>応援メッセージ | 宇部スピリッツ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a href="../index.html" class="brand">
+            <img src="../images/team_logo.jpg" alt="Ube Spirits Logo" class="brand-logo">
+            <div class="brand-text">
+                <span class="brand-main">Ube Spirits</span>
+                <span class="brand-sub">宇部スピリッツ 草野球チーム</span>
+            </div>
+        </a>
+
+        <nav class="global-nav">
+            <ul>
+                <li><a href="../index.html">TOP</a></li>
+                <li><a href="../members/index.html">メンバー</a></li>
+                <li><a href="../schedule/index.html">試合予定</a></li>
+                <li><a href="../results/index.html">試合結果</a></li>
+                <li><a href="../gallery/index.html">ギャラリー</a></li>
+                <li><a href="../recruit/index.html">メンバー募集</a></li>
+                <li><a href="../apply/index.html">練習試合申込み</a></li>
+                <li><a href="index.html" class="active">応援</a></li>
+                <li><a href="../contact/index.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- ヒーロー -->
+    <section class="page-hero support-hero">
+        <div class="page-hero-inner">
+            <p class="page-hero-tagline">SUPPORT & MESSAGE BOARD</p>
+            <h1 class="page-hero-title">応援メッセージ</h1>
+            <p class="page-hero-text">
+                宇部スピリッツへの応援コメントや感想を書き込めるページです。<br>
+                同じニックネームで投稿していただくと、同一人物からのメッセージとして表示されます。
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner">
+
+            <h2 class="section-title">ー 応援メッセージ一覧 ー</h2>
+
+            <!-- 掲示板っぽいメッセージ一覧（サンプル） -->
+            <div class="support-board">
+
+                <!-- 同じニックネーム＝同じ人と分かるように表示 -->
+                <article class="support-item">
+                    <div class="support-meta">
+                        <div class="support-user-tag user-a">
+                            <span class="support-user-icon">K</span>
+                            <span class="support-user-name">こうだい</span>
+                        </div>
+                        <time class="support-time">2025/11/20  21:15</time>
+                    </div>
+                    <p class="support-message">
+                        いつも一緒に野球してくれてありがとうございます！次の公式戦も全力でいきましょう！
+                    </p>
+                </article>
+
+                <article class="support-item">
+                    <div class="support-meta">
+                        <div class="support-user-tag user-b">
+                            <span class="support-user-icon">F</span>
+                            <span class="support-user-name">ファン1号</span>
+                        </div>
+                        <time class="support-time">2025/11/21  18:02</time>
+                    </div>
+                    <p class="support-message">
+                        宇部スピリッツの雰囲気が好きです。守備から流れを作るスタイル、これからも応援してます！
+                    </p>
+                </article>
+
+                <article class="support-item">
+                    <div class="support-meta">
+                        <div class="support-user-tag user-a">
+                            <span class="support-user-icon">K</span>
+                            <span class="support-user-name">こうだい</span>
+                        </div>
+                        <time class="support-time">2025/11/22  09:41</time>
+                    </div>
+                    <p class="support-message">
+                        次は打線爆発させましょう！1番としてしっかり出塁できるように頑張ります。
+                    </p>
+                </article>
+
+            </div>
+
+            <p class="support-note">
+                ※ 現在はサンプル表示です。実際の運用時には、ここに最新のコメントが新着順で並ぶイメージです。
+            </p>
+
+            <h2 class="section-title" style="margin-top:32px;">ー 応援メッセージを書く ー</h2>
+
+            <p class="support-intro">
+                ニックネームとメッセージを入力して、宇部スピリッツへの応援コメントを送ってください。<br>
+                同じニックネームで投稿していただくと、「同じ人からのメッセージ」とひと目で分かるようになります。
+            </p>
+
+            <!-- ひとまずダミーフォーム（サーバ処理なし） -->
+            <form class="support-form" action="#" method="post">
+                <div class="form-row">
+                    <label for="support-name">ニックネーム <span class="required">必須</span></label>
+                    <input type="text" id="support-name" name="support_name" required placeholder="例）こうだい / ファン1号 など">
+                </div>
+
+                <div class="form-row">
+                    <label for="support-message">メッセージ <span class="required">必須</span></label>
+                    <textarea id="support-message" name="support_message" rows="4" required placeholder="応援メッセージや試合の感想などをご自由にどうぞ。"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="support-rel">チームとの関係</label>
+                    <select id="support-rel" name="support_rel">
+                        <option value="">選択してください</option>
+                        <option value="player">選手</option>
+                        <option value="staff">スタッフ / マネージャー</option>
+                        <option value="family">家族・友人</option>
+                        <option value="fan">ファン・観戦者</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-row form-submit-row">
+                    <p class="support-form-note">
+                        ※ 現時点ではフォーム送信後のコメント保存処理は行っていません。<br>
+                    </p>
+                    <button type="submit" class="apply-submit">送信する（ダミー）</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 Ube Spirits Baseball Team. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
